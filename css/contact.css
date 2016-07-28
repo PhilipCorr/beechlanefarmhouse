@@ -1,0 +1,120 @@
+
+.container.marketing{
+	margin-top: 71px;
+}
+
+.label{
+	background: #FFF;
+
+}
+
+#collapse1 .row{
+	background: #308030;
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 400px;
+}
+
+/*.navbar-wrapper .navbar {
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	border-color: #e6ffe6;
+}*/
+
+.figure {
+	height: 270px;
+	margin: 20px auto 20px 70px;
+	display: block;
+}
+
+#map-canvas{
+	border-radius: 10px;
+}
+
+#myform {
+  margin-right: 0%;
+  margin-top: -2%;
+}
+
+.contact_border {
+	border-radius: 10px;
+	width: 350px;
+	margin-left: 20px;
+}
+
+#contact {
+	/*width: 80%;*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.contact_statement {
+	color: #fff;
+	display: inline;
+}
+
+.contact_left {
+	float: left;
+	width:39%;
+}
+
+.contact_right {
+	float: left;
+	width:59%;
+}
+
+label {
+	float: left;
+	font-weight: 500;
+}
+
+input {
+	font-weight: normal;
+}
+
+#textarea {
+	display: block;
+	height: 100px;
+	width: 280px;
+	font-weight: normal;
+}
+
+
+#email {
+	display: block;
+	width: 280px;
+	border-width: 0px;
+	height: 30px;
+	padding-left: 4px;
+}
+
+#name {
+	display: block;
+	width: 280px;
+	height: 30px;
+	border-width: 0px;
+	padding-left: 4px;
+}
+
+#name_title{
+	color: #fff;
+	display: inline;
+}
+
+#email_title{
+	color: #fff;
+	display: inline;
+}
+
+#message_title{
+	display: inline;
+	color: #fff;
+	clear: both;
+	margin-bottom: -10px;
+}
+
+#submit{
+	display: block;
+	clear: both;
+}

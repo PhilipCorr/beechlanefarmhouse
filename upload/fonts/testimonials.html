@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/testimonials.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Beech Lane Farm house</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a data-toggle="collapse" href="#collapse1">Contact</a></li>
+                <li class="active"><a href="#">Testimonials</a></li>
+                <li><a href="availability.html" >Availability</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="collapse1" class="panel-collapse collapse">
+<div class="row">
+<div id="contact" class="border col-sm-4">
+    <form id="myform" action="contact.php" method="POST" role ="form">
+        <fieldset class="contact_border">
+           <p>
+            <label>
+              Name:
+              <input type="text" name="name" id="name" size="15" placeholder="First & Last Name" maxlength="30" />
+            </label>
+          </p>
+          <p>
+           <label>
+              Email:
+              <input id="email" type="email" id="email" name="email" placeholder="example@gmail.com" />
+            </label>
+            <label>
+              <div id="new_line_message">
+                <p>leave a message and we will get back to you</p>
+              </div>
+              <textarea id="textarea" name="message" id="message"></textarea>
+            </label>
+        </p>
+
+       <p>
+          <input id="submit" name="submit" type="submit" value="Submit">
+       </p>
+    </fieldset>
+    </form>
+</div>
+
+<!-- Map -->
+<div class="border col-sm-8">
+    <div class="figure">
+        <div id="map-canvas" style="height:100%;"/></div>
+    </div>
+</div>
+</div>
+</div>
+
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- 2 columns and 2 rows of text -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/700x420/house1.jpg" alt="house" width="140" height="140">
+          <h2>Ms Kiely, Ruislip, May 2014</h2>
+          <p>I can honestly say this was the most beautiful holiday let I have had the pleasure of staying in.
+            The facilities were all top notch and the surroundings were amazing.
+            The house was so comfortable that we felt like we were returning home each night.
+            I am already planning my return next year!</p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/700x420/sitting.jpg" alt="sitting room" width="140" height="140">
+          <h2>Dr Merriman, Dublin, July 2013</h2>
+          <p>The house was beautiful, lovely large bedrooms and kitchen.
+            The owners were extremely friendly and obliging.
+            The area was very scenic and convenient to Kilkenny City.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/700x420/lane.jpg" alt="lane" width="140" height="140">
+          <h2>Mr Evans, Llanon, April 2014</h2>
+          <p>The location is lovely and was so peaceful.
+            We were not far from a pub or from the city of Kilkenny.
+            We were made very welcome.
+            The accommodation is lovely and we had everything we needed.
+            There was milk and a lovely apple pie in the fridge when we arrived which was a nice touch.</p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/700x420/wheel_flowers.jpg" alt="flowers" width="140" height="140">
+          <h2>Mrs Kelly, Kilcoole, July 2013</h2>
+          <p>It was a lovely house very close to everything.
+            Kilkenny is a great town and there were some great golf clubs in the area.
+            We had a great holiday and look forward to going back.</p>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"></p>
+        <p>&copy; 2016 BeechLaneFarmhouse</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+     <!--include the Maps Api javascript using the script tag-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/googlemaps.js"></script>
+  </body>
+</html>

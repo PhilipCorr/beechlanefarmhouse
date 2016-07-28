@@ -1,0 +1,25 @@
+.row > .col-md-7 {
+ width: 50%
+}
+
+.row > .col-md-5 {
+  margin-top: 50px;
+  overflow: hidden; /*clear fix hack: set to auto*/
+}
+
+img.img-rounded {
+  margin-left: 30px;
+}
+
+.col-md-5.col-md-pull-7 {
+    right: 53%;
+}
+/*.row > .col-md-push-5 {
+  left: 50%;
+  width: 40%;
+}
+
+.col-md-pull-7 {
+  width: 35%;
+  right: 30%;
+}*/

@@ -1,0 +1,13 @@
+#calendar {
+	margin: auto;
+}
+
+.fc-widget-content > .fc-scroller.fc-day-grid-container{
+	height: 630px;
+}
+
+#calendar{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 150px;
+}

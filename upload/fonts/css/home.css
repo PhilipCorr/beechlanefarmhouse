@@ -1,0 +1,9 @@
+.row > .col-md-push-5 {
+  left: 50%;
+  width: 40%;
+}
+
+.col-md-pull-7 {
+  width: 35%;
+  right: 30%;
+}

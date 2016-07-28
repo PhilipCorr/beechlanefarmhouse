@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Beech Lane Farm house</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li class="active"><a data-toggle="collapse" href="#collapse1">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="availability.html" >Availability</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+<div id="collapse1" class="panel-collapse collapse">
+<div class="row">
+<div id="contact" class="border col-sm-4">
+    <form id="myform" action="contact.php" method="POST" role ="form">
+        <fieldset class="contact_border">
+           <p>
+            <label>
+              Name: 
+              <input type="text" name="name" id="name" size="15" placeholder="First & Last Name" maxlength="30" />
+            </label> 
+          </p>
+          <p>
+           <label>
+              Email:
+              <input id="email" type="email" id="email" name="email" placeholder="example@gmail.com" />
+            </label>
+            <label>
+              <div id="new_line_message">
+                <p>leave a message and we will get back to you</p> 
+              </div>
+              <textarea id="textarea" name="message" id="message"></textarea>
+            </label>
+        </p>
+
+       <p>
+          <input id="submit" name="submit" type="submit" value="Submit">
+       </p>
+    </fieldset>
+    </form>
+</div>
+     
+<!-- Map -->
+<div class="border col-sm-8">
+    <div class="figure">
+        <div id="map-canvas" style="height:100%;"/></div>
+    </div>
+</div>
+</div>
+</div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <!--include the Maps Api javascript using the script tag-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    var myLatLng = new google.maps.LatLng(52.664566, -7.119724);
+    var mycenter = new google.maps.LatLng(52.652902, -7.191067);
+
+    function initialize() {
+      var mapOptions = {  <!--Object literal to hold map properties-->
+        zoom: 12,
+        center: mycenter,
+        zoomControl:true,
+      };
+      var map = new google.maps.Map(document.getElementById("map-canvas"), <!--map is a class. new calls a new instance of it-->
+        mapOptions);  <!-- object takes in div element and map properties-->
+      <!--document.getElementById obtains a reference to the container for the map as map-canvas is a child of the document-->
+
+      var contentString = 
+      '<div id="map_label">'+
+      '<div id="content">'+
+      '<div id="bodyContent" >'+
+      '<p>Beech Lane Farmhouse</p>'+
+      '</div>'+
+      '</div>'+
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+      var marker = new google.maps.Marker({
+       position: myLatLng,
+       map: map, /*the marker is placed on construction of the marker using the map property*/
+
+     });
+
+      google.maps.event.addListener(marker, 'mouseover', function() {
+        infowindow.open(map,marker);
+      });
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize); <!-- event listener loads the map after the page has loaded -->
+
+  </script>
+
+  </body>
+</html>
